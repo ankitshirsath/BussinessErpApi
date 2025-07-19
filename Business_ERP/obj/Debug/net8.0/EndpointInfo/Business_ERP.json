@@ -1,0 +1,264 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Business_ERP",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/VehicleIndent/PostVehicleIndent": {
+      "post": {
+        "tags": [
+          "VehicleIndent"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleIndentModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleIndentModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleIndentModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VehicleIndent/GetVehicleIndentReport": {
+      "get": {
+        "tags": [
+          "VehicleIndent"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VehicleIndent/GetVehicleIndentReportByID": {
+      "get": {
+        "tags": [
+          "VehicleIndent"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VehicleIndent/DeleteVehicleIndentByID": {
+      "delete": {
+        "tags": [
+          "VehicleIndent"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "VehicleIndentModel": {
+        "type": "object",
+        "properties": {
+          "vehicleIndentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "commChannelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partyId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleRequiredOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "vehicleTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "extendedExpiryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fromServiceNetworkId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "toServiceNetworkId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "transportItemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "consignorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "consigneeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "packingTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weight": {
+            "type": "number",
+            "format": "double"
+          },
+          "packets": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureRangeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assignedToBranchId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleIndentTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "contractId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shortCloseReasonId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "indentRemarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "estimatedRevenueCost": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "Business_ERP.Controllers.VehicleIndentController",
+    "Method": "DeleteVehicleIndentByID",
+    "RelativePath": "api/VehicleIndent/DeleteVehicleIndentByID",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Business_ERP.Controllers.VehicleIndentController",
+    "Method": "GetVehicleIndentReport",
+    "RelativePath": "api/VehicleIndent/GetVehicleIndentReport",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Business_ERP.Controllers.VehicleIndentController",
+    "Method": "GetVehicleIndentReportByID",
+    "RelativePath": "api/VehicleIndent/GetVehicleIndentReportByID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Business_ERP.Controllers.VehicleIndentController",
+    "Method": "PostVehicleIndent",
+    "RelativePath": "api/VehicleIndent/PostVehicleIndent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Business_ERP.Models.VehicleIndentModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Business_ERP.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Business_ERP.WeatherForecast, Business_ERP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
